@@ -32,12 +32,16 @@ namespace WufooSharp
         
         public Uri LinkEntriesCount { get; set; }
 
+        [JsonConverter(typeof(MySqlDateTimeConverter))]
         public DateTime StartDate { get; set; }
-        
+
+        [JsonConverter(typeof(MySqlDateTimeConverter))]
         public DateTime EndDate { get; set; }
 
+        [JsonConverter(typeof(MySqlDateTimeConverter))]
         public DateTime DateCreated { get; set; }
 
+        [JsonConverter(typeof(MySqlDateTimeConverter))]
         public DateTime DateUpdated { get; set; }
 
         public int? EntryCountToday { get; set; }
